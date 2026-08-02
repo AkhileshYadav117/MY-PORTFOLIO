@@ -6,7 +6,7 @@ Designed with a clean user experience and modern UI principles, this portfolio s
 
 ---
 
-👉 **Live Demo:** [https://akhileshyadavportfolio.netlify.app](https://akhileshyadavportfolio.netlify.app)
+🚀 **Visit Portfolio:** https://akhileshyadavportfolio.netlify.app
 
 ---
 
