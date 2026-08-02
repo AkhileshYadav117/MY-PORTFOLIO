@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Akhilesh Yadav | Aspiring Software Developer Portfolio</title>
+
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💻</text></svg>">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+<body>
+
+  <main>
+    <!-- SIDEBAR -->
+    <aside class="sidebar" data-sidebar>
+      <div class="sidebar-info">
+        <figure class="avatar-box">
+          <!-- Glassmorphic Tech Avatar SVG -->
+          <svg class="avatar-svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <linearGradient id="avatarGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#00F0FF" />
+                <stop offset="100%" stop-color="#0072FF" />
+              </linearGradient>
+              <linearGradient id="backGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#0F172A" />
+                <stop offset="100%" stop-color="#1E293B" />
+              </linearGradient>
+            </defs>
+            <circle cx="50" cy="50" r="48" fill="url(#backGrad)" stroke="url(#avatarGrad)" stroke-width="2"/>
+            <path d="M50 25 C40 25 35 32 35 42 C35 52 42 58 50 58 C58 58 65 52 65 42 C65 32 60 25 50 25 Z" fill="#E2E8F0" />
+            <path d="M50 38 L43 45 H57 Z" fill="#0072FF" opacity="0.3"/>
+            <circle cx="45" cy="40" r="2.5" fill="#090D16" />
+            <circle cx="55" cy="40" r="2.5" fill="#090D16" />
+            <path d="M22 80 C22 68 32 62 50 62 C68 62 78 68 78 80 C78 82 76 84 74 84 H26 C24 84 22 82 22 80 Z" fill="url(#avatarGrad)" />
+            <circle cx="80" cy="25" r="3" fill="#00F0FF" class="float-dot-1" />
+            <circle cx="20" cy="30" r="4" fill="#0072FF" class="float-dot-2" />
+          </svg>
+        </figure>
+        
+        <div class="info-content">
+          <h1 class="name" title="Akhilesh Yadav">Akhilesh Yadav</h1>
+          <p class="title">Aspiring Software Developer</p>
+        </div>
+
+        <button class="info_more-btn" data-sidebar-btn>
+          <span>Show Contacts</span>
+          <ion-icon name="chevron-down"></ion-icon>
+        </button>
+      </div>
+
+      <div class="sidebar-info_more">
+        <div class="separator"></div>
+
+        <ul class="contacts-list">
+          <li class="contact-item">
+            <div class="icon-box">
+              <ion-icon name="mail-outline"></ion-icon>
+            </div>
+            <div class="contact-info">
+              <p class="contact-title">Email</p>
+              <a href="mailto:yadavakhilesh.org@gmail.com" class="contact-link">yadavakhilesh.org@gmail.com</a>
+            </div>
+          </li>
+
+          <li class="contact-item">
+            <div class="icon-box">
+              <ion-icon name="location-outline"></ion-icon>
+            </div>
+            <div class="contact-info">
+              <p class="contact-title">Location</p>
+              <address>Mumbai, Maharashtra, India</address>
+            </div>
+          </li>
+
+          <li class="contact-item">
+            <div class="icon-box">
+              <ion-icon name="logo-linkedin"></ion-icon>
+            </div>
+            <div class="contact-info">
+              <p class="contact-title">LinkedIn</p>
+              <a href="https://www.linkedin.com/in/akhilesh-yadav-b366663aa?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank" class="contact-link">akhilesh-yadav-b366663aa</a>
+            </div>
+          </li>
+
+          <li class="contact-item">
+            <div class="icon-box">
+              <ion-icon name="logo-github"></ion-icon>
+            </div>
+            <div class="contact-info">
+              <p class="contact-title">Github</p>
+              <a href="https://github.com/akhileshyadav117" target="_blank" class="contact-link">Akhilesh Yadav</a>
+            </div>
+          </li>
+        </ul>
+
+        <div class="separator"></div>
+
+        <ul class="social-list">
+          <li class="social-item">
+            <a href="https://github.com/akhileshyadav117" target="_blank" class="social-link"><ion-icon name="logo-github"></ion-icon></a>
+          </li>
+          <li class="social-item">
+            <a href="https://www.linkedin.com/in/akhilesh-yadav-b366663aa?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank" class="social-link"><ion-icon name="logo-linkedin"></ion-icon></a>
+          </li>
+          <li class="social-item">
+            <a href="mailto:yadavakhilesh.org@gmail.com" class="social-link"><ion-icon name="mail-outline"></ion-icon></a>
+          </li>
+        </ul>
+      </div>
+    </aside>
+
+
+    <!-- MAIN CONTENT -->
+    <div class="main-content">
+      <!-- NAVBAR -->
+      <nav class="navbar">
+        <ul class="navbar-list">
+          <li class="navbar-item">
+            <button class="navbar-link active" data-nav-link="about">About</button>
+          </li>
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link="education">Education</button>
+          </li>
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link="projects">Projects</button>
+          </li>
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link="certifications">Certificates</button>
+          </li>
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link="contact">Contact</button>
+          </li>
+        </ul>
+      </nav>
+
+      <!-- ABOUT SECTION -->
+      <article class="about active" data-page="about">
+        <header>
+          <h2 class="h2 article-title">About Me</h2>
+        </header>
+
+        <section class="about-text">
+          <p>
+            Hello, I'm Akhilesh Yadav — a second-year B.Tech Computer Science (AI & ML) student and aspiring Software Engineer. Passionate about Full Stack Web Development, Artificial Intelligence, and Python, I enjoy building scalable web applications and intelligent software that solve real-world problems.
+          </p>
+          <p>
+            I believe in learning through hands-on projects, writing clean and maintainable code, and continuously improving my technical skills. My goal is to grow into a software engineer who creates impactful, user-focused technology while constantly exploring new innovations in AI and modern software development. I am currently open to internships and collaborative opportunities.
+          </p>
+        </section>
+
+        <!-- Interests/Services -->
+        <section class="service">
+          <h3 class="h3 service-title">My Interests</h3>
+          <ul class="service-list">
+            <li class="service-item">
+              <div class="service-icon-box">
+                <ion-icon name="code-slash-outline"></ion-icon>
+              </div>
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Web Development</h4>
+                <p class="service-item-text">
+                  Creating modern, interactive, and responsive web systems using clean frontend architectures and robust backend flows.
+                </p>
+              </div>
+            </li>
+
+            <li class="service-item">
+              <div class="service-icon-box">
+                <ion-icon name="hardware-chip-outline"></ion-icon>
+              </div>
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">AI & ML Enthusiast</h4>
+                <p class="service-item-text">
+                  Diving into core data science concepts, neural networks, automation scripts, and exploring real-world applications of intelligence.
+                </p>
+              </div>
+            </li>
+
+            <li class="service-item">
+              <div class="service-icon-box">
+                <ion-icon name="logo-python"></ion-icon>
+              </div>
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Python Programming</h4>
+                <p class="service-item-text">
+                  Writing scalable backend logic, scripting scrapers, and implementing predictive models using Scikit-Learn and Pandas.
+                </p>
+              </div>
+            </li>
+
+            <li class="service-item">
+              <div class="service-icon-box">
+                <ion-icon name="git-branch-outline"></ion-icon>
+              </div>
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Software Engineering</h4>
+                <p class="service-item-text">
+                  Studying data structures, system patterns, and object-oriented architectures to design clean, reusable, and optimal code.
+                </p>
+              </div>
+            </li>
+          </ul>
+        </section>
+      </article>
+
+      <!-- EDUCATION SECTION -->
+      <article class="education" data-page="education">
+        <header>
+          <h2 class="h2 article-title">Education</h2>
+        </header>
+
+        <!-- Education timeline -->
+        <section class="timeline">
+          <div class="title-wrapper">
+            <div class="icon-box">
+              <ion-icon name="book-outline"></ion-icon>
+            </div>
+            <h3 class="h3">Academic Journey</h3>
+          </div>
+
+          <ol class="timeline-list">
+            <li class="timeline-item">
+              <h4 class="h4 timeline-item-title">Thakur Shyamnarayan Engineering College</h4>
+              <span>2025 - Present</span>
+              <p class="timeline-text">
+                Bachelor of Engineering (B.E.) in Computer Science and Engineering (AI & ML). Currently in second year. Gaining practical foundations in algorithmic computation, data engineering, and machine learning architectures.
+              </p>
+            </li>
+
+            <li class="timeline-item">
+              <h4 class="h4 timeline-item-title">Higher Secondary Education (Class 12th)</h4>
+              <span>2023 - 2025</span>
+              <p class="timeline-text">
+                Maharashtra State Board. Explored scientific principles with deep core focus in Mathematics, Physics, Chemistry, and Computer Science.
+              </p>
+            </li>
+
+            <li class="timeline-item">
+              <h4 class="h4 timeline-item-title">Secondary School Education (Class 10th)</h4>
+              <span>2022 - 2023</span>
+              <p class="timeline-text">
+                Maharashtra State Board. Achieved solid academic benchmarks with a focus on fundamental science and mathematics.
+              </p>
+            </li>
+          </ol>
+        </section>
+
+        <!-- Skills Progress Bar -->
+        <section class="skill">
+          <div class="title-wrapper">
+            <div class="icon-box">
+              <ion-icon name="school-outline"></ion-icon>
+            </div>
+            <h3 class="h3">My Skills</h3>
+          </div>
+
+          <ul class="skills-list content-card">
+            <li class="skills-item">
+              <div class="title-wrapper">
+                <h5 class="h5">Python Programming (Completed)</h5>
+                <data value="100">100%</data>
+              </div>
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 100%;"></div>
+              </div>
+            </li>
+
+            <li class="skills-item">
+              <div class="title-wrapper">
+                <h5 class="h5">Frontend Web Development (Completed)</h5>
+                <data value="100">100%</data>
+              </div>
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 100%;"></div>
+              </div>
+            </li>
+
+            <li class="skills-item">
+              <div class="title-wrapper">
+                <h5 class="h5">C Language (Completed)</h5>
+                <data value="100">100%</data>
+              </div>
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 100%;"></div>
+              </div>
+            </li>
+
+            <li class="skills-item">
+              <div class="title-wrapper">
+                <h5 class="h5">NumPy & Pandas (Completed)</h5>
+                <data value="100">100%</data>
+              </div>
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 100%;"></div>
+              </div>
+            </li>
+
+            <li class="skills-item">
+              <div class="title-wrapper">
+                <h5 class="h5">Tkinter GUI Development (Completed)</h5>
+                <data value="100">100%</data>
+              </div>
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 100%;"></div>
+              </div>
+            </li>
+          </ul>
+        </section>
+      </article>
+
+      <!-- PROJECTS SECTION -->
+      <article class="portfolio" data-page="projects">
+        <header>
+          <h2 class="h2 article-title">Projects</h2>
+        </header>
+
+        <section class="projects-list-section">
+          <!-- Project filter select dropdown for mobile -->
+          <div class="filter-select-box">
+            <button class="filter-select" data-select>
+              <div class="select-value" data-select-value>All Projects</div>
+              <div class="select-icon">
+                <ion-icon name="chevron-down"></ion-icon>
+              </div>
+            </button>
+            <ul class="select-list">
+              <li class="select-item"><button data-select-item>All Projects</button></li>
+              <li class="select-item"><button data-select-item>Web Development</button></li>
+              <li class="select-item"><button data-select-item>Machine Learning & AI</button></li>
+              <li class="select-item"><button data-select-item>IoT / Hardware</button></li>
+            </ul>
+          </div>
+
+          <!-- Project filter desktop tabs -->
+          <ul class="filter-list">
+            <li class="filter-item">
+              <button class="active" data-filter-btn>All Projects</button>
+            </li>
+            <li class="filter-item">
+              <button data-filter-btn>Web Development</button>
+            </li>
+            <li class="filter-item">
+              <button data-filter-btn>Machine Learning & AI</button>
+            </li>
+            <li class="filter-item">
+              <button data-filter-btn>IoT / Hardware</button>
+            </li>
+          </ul>
+
+          <!-- Projects Grid -->
+          <ul class="project-list">
+            <li class="project-item active" data-filter-item data-category="web development">
+              <a href="https://github.com/akhileshyadav117" target="_blank">
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+                  <!-- SVG Nosy Neighbor Graphics -->
+                  <svg class="project-svg-thumb" viewBox="0 0 400 250" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="400" height="250" fill="#0F172A"/>
+                    <circle cx="200" cy="110" r="45" fill="none" stroke="#00F0FF" stroke-width="3"/>
+                    <circle cx="200" cy="110" r="15" fill="#0072FF" />
+                    <line x1="200" y1="25" x2="200" y2="65" stroke="#38BDF8" stroke-width="2" />
+                    <line x1="200" y1="155" x2="200" y2="195" stroke="#38BDF8" stroke-width="2" />
+                    <line x1="115" y1="110" x2="155" y2="110" stroke="#38BDF8" stroke-width="2" />
+                    <line x1="245" y1="110" x2="285" y2="110" stroke="#38BDF8" stroke-width="2" />
+                    <text x="50%" y="87%" dominant-baseline="middle" text-anchor="middle" fill="#E2E8F0" font-family="Outfit" font-weight="600" font-size="16">Nosy Neighbor</text>
+                  </svg>
+                </figure>
+                <h3 class="project-title">Nosy Neighbor</h3>
+                <p class="project-category">Web Development</p>
+                <p class="project-desc">A smart home security monitor designed to capture anomalies, stream video, and trigger instant safety notifications.</p>
+              </a>
+            </li>
+
+            <li class="project-item active" data-filter-item data-category="machine learning & ai">
+              <a href="https://github.com/akhileshyadav117" target="_blank">
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+                  <!-- SVG Jarvis Graphics -->
+                  <svg class="project-svg-thumb" viewBox="0 0 400 250" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="400" height="250" fill="#0F172A"/>
+                    <circle cx="200" cy="110" r="50" fill="none" stroke="#0072FF" stroke-width="2"/>
+                    <circle cx="200" cy="110" r="40" fill="none" stroke="#00F0FF" stroke-width="4" stroke-dasharray="10 5"/>
+                    <circle cx="200" cy="110" r="10" fill="#00F0FF" />
+                    <path d="M150,110 L170,110 M230,110 L250,110 M200,60 L200,80 M200,140 L200,160" stroke="#38BDF8" stroke-width="2" />
+                    <text x="50%" y="87%" dominant-baseline="middle" text-anchor="middle" fill="#E2E8F0" font-family="Outfit" font-weight="600" font-size="16">Jarvis</text>
+                  </svg>
+                </figure>
+                <h3 class="project-title">Jarvis (Virtual Assistant)</h3>
+                <p class="project-category">Machine Learning & AI</p>
+                <p class="project-desc">A python voice assistant that automates local operations, runs web searches, and processes desktop instructions.</p>
+              </a>
+            </li>
+
+            <li class="project-item active" data-filter-item data-category="machine learning & ai">
+              <a href="https://github.com/akhileshyadav117" target="_blank">
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+                  <!-- SVG AI Chatbot Graphics -->
+                  <svg class="project-svg-thumb" viewBox="0 0 400 250" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="400" height="250" fill="#0F172A"/>
+                    <rect x="130" y="70" width="140" height="80" rx="15" fill="none" stroke="#00F0FF" stroke-width="3" />
+                    <circle cx="170" cy="105" r="10" fill="#0072FF" />
+                    <circle cx="230" cy="105" r="10" fill="#0072FF" />
+                    <path d="M180,130 Q200,145 220,130" fill="none" stroke="#00F0FF" stroke-width="3" stroke-linecap="round"/>
+                    <line x1="200" y1="40" x2="200" y2="70" stroke="#00F0FF" stroke-width="3" />
+                    <circle cx="200" cy="35" r="7" fill="#0072FF" />
+                    <text x="50%" y="87%" dominant-baseline="middle" text-anchor="middle" fill="#E2E8F0" font-family="Outfit" font-weight="600" font-size="16">AI Chatbot</text>
+                  </svg>
+                </figure>
+                <h3 class="project-title">AI Chatbot</h3>
+                <p class="project-category">Machine Learning & AI</p>
+                <p class="project-desc">An intelligent conversational bot trained to comprehend complex user intentions and answer inquiries dynamically.</p>
+              </a>
+            </li>
+
+            <li class="project-item active" data-filter-item data-category="iot / hardware">
+              <a href="https://github.com/akhileshyadav117" target="_blank">
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+                  <!-- SVG IoT Water Sensor Graphics -->
+                  <svg class="project-svg-thumb" viewBox="0 0 400 250" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="400" height="250" fill="#0F172A"/>
+                    <path d="M200,50 C150,110 150,160 200,180 C250,160 250,110 200,50 Z" fill="none" stroke="#00F0FF" stroke-width="3"/>
+                    <path d="M200,95 C175,125 175,155 200,170 C225,155 225,125 200,95 Z" fill="#0072FF" opacity="0.6"/>
+                    <path d="M110,90 A 20,20 0 0,1 150,90" fill="none" stroke="#38BDF8" stroke-width="2" />
+                    <path d="M250,90 A 20,20 0 0,1 290,90" fill="none" stroke="#38BDF8" stroke-width="2" />
+                    <text x="50%" y="87%" dominant-baseline="middle" text-anchor="middle" fill="#E2E8F0" font-family="Outfit" font-weight="600" font-size="16">IoT Water Sensor</text>
+                  </svg>
+                </figure>
+                <h3 class="project-title">IoT Based Water Sensor</h3>
+                <p class="project-category">IoT / Hardware</p>
+                <p class="project-desc">An automated IoT device measuring water levels and transmitting live telemetry metrics to prevent overflow.</p>
+              </a>
+            </li>
+          </ul>
+        </section>
+      </article>
+
+      <!-- CERTIFICATIONS SECTION -->
+      <article class="certifications" data-page="certifications">
+        <header>
+          <h2 class="h2 article-title">Certificates</h2>
+        </header>
+
+        <section class="certifications-section">
+          <ul class="certifications-list">
+            <li class="certification-item">
+              <a href="#" target="_blank">
+                <figure class="cert-img">
+                  <svg class="cert-svg-thumb" viewBox="0 0 350 220" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="350" height="220" fill="#1E293B" rx="8"/>
+                    <rect x="20" y="20" width="310" height="180" fill="none" stroke="#00F0FF" stroke-width="2" rx="4" stroke-dasharray="8 4"/>
+                    <path d="M175,40 L195,80 L240,85 L205,115 L215,160 L175,135 L135,160 L145,115 L110,85 L155,80 Z" fill="#0072FF" opacity="0.3"/>
+                    <text x="50%" y="45%" dominant-baseline="middle" text-anchor="middle" fill="#F8FAFC" font-family="Outfit" font-weight="700" font-size="20">Python Programming</text>
+                    <text x="50%" y="65%" dominant-baseline="middle" text-anchor="middle" fill="#38BDF8" font-family="Poppins" font-size="14">Certification Course</text>
+                  </svg>
+                </figure>
+                <div class="cert-content">
+                  <h3 class="cert-title">Python Core & Advanced</h3>
+                  <p class="cert-issuer">Completed Training</p>
+                </div>
+              </a>
+            </li>
+
+            <li class="certification-item">
+              <a href="#" target="_blank">
+                <figure class="cert-img">
+                  <svg class="cert-svg-thumb" viewBox="0 0 350 220" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="350" height="220" fill="#1E293B" rx="8"/>
+                    <rect x="20" y="20" width="310" height="180" fill="none" stroke="#00F0FF" stroke-width="2" rx="4" stroke-dasharray="8 4"/>
+                    <path d="M175,40 L195,80 L240,85 L205,115 L215,160 L175,135 L135,160 L145,115 L110,85 L155,80 Z" fill="#0072FF" opacity="0.3"/>
+                    <text x="50%" y="45%" dominant-baseline="middle" text-anchor="middle" fill="#F8FAFC" font-family="Outfit" font-weight="700" font-size="20">Web Development Bootcamp</text>
+                    <text x="50%" y="65%" dominant-baseline="middle" text-anchor="middle" fill="#38BDF8" font-family="Poppins" font-size="14">Frontend Certification</text>
+                  </svg>
+                </figure>
+                <div class="cert-content">
+                  <h3 class="cert-title">Full Stack Web Foundation</h3>
+                  <p class="cert-issuer">Completed Training</p>
+                </div>
+              </a>
+            </li>
+          </ul>
+        </section>
+      </article>
+
+      <!-- CONTACT SECTION -->
+      <article class="contact" data-page="contact">
+        <header>
+          <h2 class="h2 article-title">Contact</h2>
+        </header>
+
+        <!-- Dynamic Connect Cards Dashboard -->
+        <section class="connect-dashboard">
+          <p class="connect-text">
+            Let's collaborate on code, machine learning, or software internships. You can reach out to me directly through any of the platforms listed below:
+          </p>
+
+          <div class="contact-grid">
+            <a href="mailto:yadavakhilesh.org@gmail.com" class="contact-card-link">
+              <div class="contact-card-box">
+                <div class="card-icon-box">
+                  <ion-icon name="mail-unread-outline"></ion-icon>
+                </div>
+                <h3 class="card-h3">Email Me</h3>
+                <p class="card-val">yadavakhilesh.org@gmail.com</p>
+                <span class="card-action">Send Email →</span>
+              </div>
+            </a>
+
+            <a href="https://www.linkedin.com/in/akhilesh-yadav-b366663aa?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank" class="contact-card-link">
+              <div class="contact-card-box">
+                <div class="card-icon-box">
+                  <ion-icon name="logo-linkedin"></ion-icon>
+                </div>
+                <h3 class="card-h3">LinkedIn</h3>
+                <p class="card-val">akhilesh-yadav-b366663aa</p>
+                <span class="card-action">Let's Connect →</span>
+              </div>
+            </a>
+
+            <a href="https://github.com/akhileshyadav117" target="_blank" class="contact-card-link">
+              <div class="contact-card-box">
+                <div class="card-icon-box">
+                  <ion-icon name="logo-github"></ion-icon>
+                </div>
+                <h3 class="card-h3">GitHub</h3>
+                <p class="card-val">akhileshyadav117</p>
+                <span class="card-action">View Repositories →</span>
+              </div>
+            </a>
+          </div>
+        </section>
+      </article>
+    </div>
+  </main>
+
+  <!-- Ionicons modules -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+  <!-- Custom JavaScript -->
+  <script src="./assets/js/script.js"></script>
+</body>
+</html>
