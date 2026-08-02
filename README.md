@@ -6,7 +6,7 @@ Designed with a clean user experience and modern UI principles, this portfolio s
 
 ---
 
-👉 **Live Demo:** [http://localhost:8000](http://localhost:8000) *(when running locally)*
+👉 **Live Demo:** [https://akhileshyadavportfolio.netlify.app](https://akhileshyadavportfolio.netlify.app)
 
 ---
 
