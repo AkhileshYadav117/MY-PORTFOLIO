@@ -246,6 +246,37 @@ main {
   margin-top: 5px;
 }
 
+/* Status Badge */
+.status-badge {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(16, 185, 129, 0.08); /* Emerald green transparent background */
+  border: 1px solid rgba(16, 185, 129, 0.25);
+  color: #10B981;
+  font-size: 11px;
+  font-weight: 500;
+  padding: 4px 10px;
+  border-radius: 20px;
+  margin-top: 8px;
+  width: max-content;
+}
+
+.status-dot {
+  width: 6px;
+  height: 6px;
+  background: #10B981;
+  border-radius: 50%;
+  box-shadow: 0 0 8px #10B981;
+  animation: pulseGreen 2s infinite;
+}
+
+@keyframes pulseGreen {
+  0% { transform: scale(0.9); opacity: 0.6; }
+  50% { transform: scale(1.1); opacity: 1; box-shadow: 0 0 12px #10B981; }
+  100% { transform: scale(0.9); opacity: 0.6; }
+}
+
 .info_more-btn {
   position: absolute;
   top: 0;
@@ -465,6 +496,53 @@ article.active { display: block; }
 }
 
 .about-text p { margin-bottom: 15px; }
+
+/* Internship Callout Banner */
+.internship-banner {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  background: linear-gradient(135deg, rgba(0, 240, 255, 0.04) 0%, rgba(0, 114, 255, 0.04) 100%);
+  border: 1px solid rgba(0, 240, 255, 0.15);
+  border-radius: 16px;
+  padding: 15px 20px;
+  margin-bottom: 25px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+.internship-banner .banner-icon {
+  font-size: 24px;
+  color: var(--accent-cyan);
+  background: rgba(0, 240, 255, 0.08);
+  padding: 10px;
+  border-radius: 12px;
+  border: 1px solid rgba(0, 240, 255, 0.2);
+  box-shadow: var(--glow-cyan);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.internship-banner .banner-content {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.internship-banner .banner-content h4 {
+  font-family: var(--ff-outfit);
+  color: var(--text-primary);
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.internship-banner .banner-content p {
+  color: var(--text-secondary);
+  font-size: 13px;
+  font-weight: 300;
+  line-height: 1.5;
+  margin-bottom: 0;
+}
 
 /* Service Interests */
 .service { margin-bottom: 25px; }
@@ -1074,6 +1152,10 @@ article.active { display: block; }
   .info-content .title {
     margin-inline: auto;
     font-size: 13px;
+  }
+
+  .status-badge {
+    margin-inline: auto;
   }
 
   .info_more-btn { display: none; } /* Hide mobile button on desktop */
