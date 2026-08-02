@@ -18,7 +18,6 @@ This portfolio highlights:
 - 🎓 Education
 - 🛠 Technical Skills
 - 🚀 Featured Projects
-- 📜 Certifications
 - 📬 Contact Information
 
 Every section has been carefully designed to provide a clean, interactive, and professional experience.
