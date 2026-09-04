@@ -126,12 +126,6 @@ I'm always open to discussing:
 
 ---
 
-## ⭐ Support
-
-If you found this project helpful or inspiring, consider giving it a **⭐ Star** on GitHub.
-
----
-
 ## 📄 License
 
 This project is released under the **MIT License**
