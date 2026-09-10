@@ -1255,6 +1255,208 @@ article.active { display: block; }
 
 
 /*-----------------------------------*\
+  #DEVELOPER CMS & CREATOR STYLES
+\*-----------------------------------*/
+
+.skills-header-wrapper,
+.projects-header-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.skills-header-wrapper .title-wrapper,
+.projects-header-wrapper .article-title {
+  margin-bottom: 0;
+}
+
+.add-cms-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--ff-outfit);
+  font-size: 12.5px;
+  font-weight: 600;
+  color: var(--accent-cyan);
+  background: rgba(0, 240, 255, 0.08);
+  border: 1px solid rgba(0, 240, 255, 0.3);
+  padding: 6px 14px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: var(--transition-1);
+}
+
+.add-cms-btn:hover {
+  background: var(--accent-gradient);
+  color: var(--bg-primary);
+  border-color: transparent;
+  box-shadow: var(--glow-cyan);
+  transform: translateY(-2px);
+}
+
+.sidebar-cms-trigger {
+  margin-top: 15px;
+  width: 100%;
+}
+
+.cms-portal-btn {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-family: var(--ff-outfit);
+  font-size: 12.5px;
+  font-weight: 600;
+  color: hsl(210, 40%, 95%);
+  background: rgba(30, 41, 59, 0.5);
+  border: 1px solid var(--border-glass-hover);
+  padding: 8px 14px;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: var(--transition-1);
+}
+
+.cms-portal-btn:hover {
+  border-color: var(--accent-cyan);
+  background: rgba(0, 240, 255, 0.1);
+  color: var(--accent-cyan);
+  box-shadow: var(--glow-cyan);
+}
+
+/* Form Styles inside Modals */
+.cms-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 15px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.form-label {
+  font-family: var(--ff-outfit);
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text-primary);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.form-input,
+.form-select,
+.form-textarea {
+  background: rgba(15, 23, 42, 0.8);
+  border: 1px solid var(--border-input);
+  border-radius: 10px;
+  padding: 10px 14px;
+  color: var(--text-primary);
+  font-size: 13.5px;
+  font-family: var(--ff-poppins);
+  transition: var(--transition-1);
+}
+
+.form-input:focus,
+.form-select:focus,
+.form-textarea:focus {
+  border-color: var(--accent-cyan);
+  box-shadow: 0 0 10px rgba(0, 240, 255, 0.2);
+  outline: none;
+}
+
+.form-select option {
+  background: var(--bg-secondary);
+  color: var(--text-primary);
+}
+
+.form-textarea {
+  min-height: 85px;
+  resize: vertical;
+}
+
+.form-range-container {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.form-range {
+  flex: 1;
+  accent-color: var(--accent-cyan);
+  cursor: pointer;
+}
+
+.range-val-badge {
+  font-family: var(--ff-outfit);
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--accent-cyan);
+  background: rgba(0, 240, 255, 0.1);
+  border: 1px solid rgba(0, 240, 255, 0.25);
+  padding: 3px 10px;
+  border-radius: 6px;
+  min-width: 48px;
+  text-align: center;
+}
+
+.form-help-text {
+  font-size: 11.5px;
+  color: var(--text-muted);
+}
+
+.cms-code-box {
+  background: rgba(9, 13, 22, 0.9);
+  border: 1px solid var(--border-glass);
+  border-radius: 10px;
+  padding: 12px;
+  font-family: monospace;
+  font-size: 12px;
+  color: var(--accent-cyan);
+  max-height: 180px;
+  overflow-y: auto;
+  white-space: pre-wrap;
+  word-break: break-all;
+  user-select: all;
+  margin-top: 10px;
+}
+
+.cms-toast {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  background: linear-gradient(135deg, #059669 0%, #10B981 100%);
+  color: #fff;
+  padding: 12px 20px;
+  border-radius: 12px;
+  font-family: var(--ff-outfit);
+  font-size: 13.5px;
+  font-weight: 600;
+  box-shadow: 0 10px 25px rgba(16, 185, 129, 0.35);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  z-index: 10000;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.3s ease;
+  pointer-events: none;
+}
+
+.cms-toast.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+/*-----------------------------------*\
   #CERTIFICATIONS PAGE
 \*-----------------------------------*/
 
