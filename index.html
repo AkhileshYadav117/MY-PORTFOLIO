@@ -348,9 +348,10 @@
             </button>
             <ul class="select-list">
               <li class="select-item"><button data-select-item>All Projects</button></li>
-              <li class="select-item"><button data-select-item>Web Development</button></li>
               <li class="select-item"><button data-select-item>Machine Learning & AI</button></li>
+              <li class="select-item"><button data-select-item>Web Development</button></li>
               <li class="select-item"><button data-select-item>IoT / Hardware</button></li>
+              <li class="select-item"><button data-select-item>Python Apps & Games</button></li>
             </ul>
           </div>
 
@@ -360,108 +361,406 @@
               <button class="active" data-filter-btn>All Projects</button>
             </li>
             <li class="filter-item">
-              <button data-filter-btn>Web Development</button>
-            </li>
-            <li class="filter-item">
               <button data-filter-btn>Machine Learning & AI</button>
             </li>
             <li class="filter-item">
+              <button data-filter-btn>Web Development</button>
+            </li>
+            <li class="filter-item">
               <button data-filter-btn>IoT / Hardware</button>
+            </li>
+            <li class="filter-item">
+              <button data-filter-btn>Python Apps & Games</button>
             </li>
           </ul>
 
           <!-- Projects Grid -->
           <ul class="project-list">
-            <li class="project-item active" data-filter-item data-category="web development">
-              <a href="https://github.com/akhileshyadav117" target="_blank">
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-                  <!-- SVG Nosy Neighbor Graphics -->
-                  <svg class="project-svg-thumb" viewBox="0 0 400 250" xmlns="http://www.w3.org/2000/svg">
-                    <rect width="400" height="250" fill="#0F172A"/>
-                    <circle cx="200" cy="110" r="45" fill="none" stroke="#00F0FF" stroke-width="3"/>
-                    <circle cx="200" cy="110" r="15" fill="#0072FF" />
-                    <line x1="200" y1="25" x2="200" y2="65" stroke="#38BDF8" stroke-width="2" />
-                    <line x1="200" y1="155" x2="200" y2="195" stroke="#38BDF8" stroke-width="2" />
-                    <line x1="115" y1="110" x2="155" y2="110" stroke="#38BDF8" stroke-width="2" />
-                    <line x1="245" y1="110" x2="285" y2="110" stroke="#38BDF8" stroke-width="2" />
-                    <text x="50%" y="87%" dominant-baseline="middle" text-anchor="middle" fill="#E2E8F0" font-family="Outfit" font-weight="600" font-size="16">Nosy Neighbor</text>
-                  </svg>
-                </figure>
-                <h3 class="project-title">Nosy Neighbor</h3>
-                <p class="project-category">Web Development</p>
-                <p class="project-desc">A smart home security monitor designed to capture anomalies, stream video, and trigger instant safety notifications.</p>
-              </a>
+            <!-- 1. InterviewForge -->
+            <li class="project-item active" data-filter-item data-category="machine learning & ai" data-project-id="interviewforge">
+              <figure class="project-img" data-modal-trigger="interviewforge">
+                <div class="project-item-icon-box">
+                  <ion-icon name="scan-outline"></ion-icon>
+                </div>
+                <svg class="project-svg-thumb" viewBox="0 0 400 250" xmlns="http://www.w3.org/2000/svg">
+                  <defs>
+                    <linearGradient id="gradIF" x1="0%" y1="0%" x2="100%" y2="100%">
+                      <stop offset="0%" stop-color="#0F172A"/>
+                      <stop offset="100%" stop-color="#1E293B"/>
+                    </linearGradient>
+                  </defs>
+                  <rect width="400" height="250" fill="url(#gradIF)"/>
+                  <circle cx="200" cy="105" r="48" fill="none" stroke="#00F0FF" stroke-width="2.5"/>
+                  <circle cx="200" cy="105" r="32" fill="none" stroke="#0072FF" stroke-width="2" stroke-dasharray="6 3"/>
+                  <circle cx="200" cy="105" r="14" fill="#00F0FF" />
+                  <path d="M150,60 L135,60 L135,75 M250,60 L265,60 L265,75 M150,150 L135,150 L135,135 M250,150 L265,150 L265,135" stroke="#38BDF8" stroke-width="2.5" stroke-linecap="round"/>
+                  <text x="50%" y="87%" dominant-baseline="middle" text-anchor="middle" fill="#E2E8F0" font-family="Outfit" font-weight="600" font-size="16">InterviewForge</text>
+                </svg>
+              </figure>
+              
+              <div class="project-card-header">
+                <span class="project-category-badge">Machine Learning & AI</span>
+                <span class="project-status-pill"><ion-icon name="sparkles"></ion-icon> Featured</span>
+              </div>
+              
+              <h3 class="project-title">InterviewForge</h3>
+              <p class="project-desc">AI-powered interview preparation platform generating personalized technical & behavioral questions, simulating sessions, and providing readiness feedback.</p>
+              
+              <div class="project-tech-list">
+                <span class="tech-tag">Python</span>
+                <span class="tech-tag">AI/LLM APIs</span>
+                <span class="tech-tag">Web Tech</span>
+              </div>
+
+              <div class="project-card-actions">
+                <button class="project-modal-trigger-btn" data-modal-trigger="interviewforge">
+                  <span>Qualifications</span>
+                  <ion-icon name="information-circle-outline"></ion-icon>
+                </button>
+                <div class="project-links-group">
+                  <a href="https://github.com/akhileshyadav117" target="_blank" rel="noopener noreferrer" class="project-icon-link" title="GitHub Code">
+                    <ion-icon name="logo-github"></ion-icon>
+                  </a>
+                  <a href="https://github.com/akhileshyadav117" target="_blank" rel="noopener noreferrer" class="project-icon-link" title="Live Preview">
+                    <ion-icon name="open-outline"></ion-icon>
+                  </a>
+                </div>
+              </div>
             </li>
 
-            <li class="project-item active" data-filter-item data-category="machine learning & ai">
-              <a href="https://github.com/akhileshyadav117" target="_blank">
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-                  <!-- SVG Jarvis Graphics -->
-                  <svg class="project-svg-thumb" viewBox="0 0 400 250" xmlns="http://www.w3.org/2000/svg">
-                    <rect width="400" height="250" fill="#0F172A"/>
-                    <circle cx="200" cy="110" r="50" fill="none" stroke="#0072FF" stroke-width="2"/>
-                    <circle cx="200" cy="110" r="40" fill="none" stroke="#00F0FF" stroke-width="4" stroke-dasharray="10 5"/>
-                    <circle cx="200" cy="110" r="10" fill="#00F0FF" />
-                    <path d="M150,110 L170,110 M230,110 L250,110 M200,60 L200,80 M200,140 L200,160" stroke="#38BDF8" stroke-width="2" />
-                    <text x="50%" y="87%" dominant-baseline="middle" text-anchor="middle" fill="#E2E8F0" font-family="Outfit" font-weight="600" font-size="16">Jarvis</text>
-                  </svg>
-                </figure>
-                <h3 class="project-title">Jarvis (Virtual Assistant)</h3>
-                <p class="project-category">Machine Learning & AI</p>
-                <p class="project-desc">A python voice assistant that automates local operations, runs web searches, and processes desktop instructions.</p>
-              </a>
+            <!-- 2. Research Agent -->
+            <li class="project-item active" data-filter-item data-category="machine learning & ai" data-project-id="research-agent">
+              <figure class="project-img" data-modal-trigger="research-agent">
+                <div class="project-item-icon-box">
+                  <ion-icon name="search-outline"></ion-icon>
+                </div>
+                <svg class="project-svg-thumb" viewBox="0 0 400 250" xmlns="http://www.w3.org/2000/svg">
+                  <rect width="400" height="250" fill="#090D16"/>
+                  <circle cx="185" cy="100" r="38" fill="none" stroke="#00F0FF" stroke-width="3"/>
+                  <line x1="212" y1="127" x2="245" y2="160" stroke="#0072FF" stroke-width="4" stroke-linecap="round"/>
+                  <circle cx="185" cy="100" r="15" fill="#0072FF" opacity="0.4"/>
+                  <circle cx="140" cy="70" r="4" fill="#38BDF8"/>
+                  <circle cx="230" cy="65" r="4" fill="#00F0FF"/>
+                  <line x1="140" y1="70" x2="160" y2="85" stroke="#38BDF8" stroke-width="1.5" stroke-dasharray="3 2"/>
+                  <line x1="230" y1="65" x2="205" y2="80" stroke="#00F0FF" stroke-width="1.5" stroke-dasharray="3 2"/>
+                  <text x="50%" y="87%" dominant-baseline="middle" text-anchor="middle" fill="#E2E8F0" font-family="Outfit" font-weight="600" font-size="16">Research Agent</text>
+                </svg>
+              </figure>
+              
+              <div class="project-card-header">
+                <span class="project-category-badge">Machine Learning & AI</span>
+                <span class="project-status-pill"><ion-icon name="sparkles"></ion-icon> Featured</span>
+              </div>
+              
+              <h3 class="project-title">Research Agent</h3>
+              <p class="project-desc">AI-driven research assistant designed to explore complex topics, retrieve relevant information, and generate structured research briefs.</p>
+              
+              <div class="project-tech-list">
+                <span class="tech-tag">Python</span>
+                <span class="tech-tag">AI/LLM APIs</span>
+                <span class="tech-tag">Web Tech</span>
+              </div>
+
+              <div class="project-card-actions">
+                <button class="project-modal-trigger-btn" data-modal-trigger="research-agent">
+                  <span>Qualifications</span>
+                  <ion-icon name="information-circle-outline"></ion-icon>
+                </button>
+                <div class="project-links-group">
+                  <a href="https://github.com/akhileshyadav117" target="_blank" rel="noopener noreferrer" class="project-icon-link" title="GitHub Code">
+                    <ion-icon name="logo-github"></ion-icon>
+                  </a>
+                  <a href="https://github.com/akhileshyadav117" target="_blank" rel="noopener noreferrer" class="project-icon-link" title="Live Preview">
+                    <ion-icon name="open-outline"></ion-icon>
+                  </a>
+                </div>
+              </div>
             </li>
 
-            <li class="project-item active" data-filter-item data-category="machine learning & ai">
-              <a href="https://github.com/akhileshyadav117" target="_blank">
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-                  <!-- SVG AI Chatbot Graphics -->
-                  <svg class="project-svg-thumb" viewBox="0 0 400 250" xmlns="http://www.w3.org/2000/svg">
-                    <rect width="400" height="250" fill="#0F172A"/>
-                    <rect x="130" y="70" width="140" height="80" rx="15" fill="none" stroke="#00F0FF" stroke-width="3" />
-                    <circle cx="170" cy="105" r="10" fill="#0072FF" />
-                    <circle cx="230" cy="105" r="10" fill="#0072FF" />
-                    <path d="M180,130 Q200,145 220,130" fill="none" stroke="#00F0FF" stroke-width="3" stroke-linecap="round"/>
-                    <line x1="200" y1="40" x2="200" y2="70" stroke="#00F0FF" stroke-width="3" />
-                    <circle cx="200" cy="35" r="7" fill="#0072FF" />
-                    <text x="50%" y="87%" dominant-baseline="middle" text-anchor="middle" fill="#E2E8F0" font-family="Outfit" font-weight="600" font-size="16">AI Chatbot</text>
-                  </svg>
-                </figure>
-                <h3 class="project-title">AI Chatbot</h3>
-                <p class="project-category">Machine Learning & AI</p>
-                <p class="project-desc">An intelligent conversational bot trained to comprehend complex user intentions and answer inquiries dynamically.</p>
-              </a>
+            <!-- 3. Amazon Clone -->
+            <li class="project-item active" data-filter-item data-category="web development" data-project-id="amazon-clone">
+              <figure class="project-img" data-modal-trigger="amazon-clone">
+                <div class="project-item-icon-box">
+                  <ion-icon name="cart-outline"></ion-icon>
+                </div>
+                <svg class="project-svg-thumb" viewBox="0 0 400 250" xmlns="http://www.w3.org/2000/svg">
+                  <rect width="400" height="250" fill="#0F172A"/>
+                  <rect x="110" y="55" width="180" height="110" rx="12" fill="none" stroke="#00F0FF" stroke-width="2.5"/>
+                  <line x1="110" y1="85" x2="290" y2="85" stroke="rgba(0, 240, 255, 0.3)" stroke-width="1.5"/>
+                  <circle cx="130" cy="70" r="4" fill="#00F0FF"/>
+                  <circle cx="145" cy="70" r="4" fill="#38BDF8"/>
+                  <path d="M150,120 C180,140 220,140 250,120" fill="none" stroke="#FF9900" stroke-width="3" stroke-linecap="round"/>
+                  <polygon points="252,118 245,115 248,124" fill="#FF9900"/>
+                  <text x="50%" y="87%" dominant-baseline="middle" text-anchor="middle" fill="#E2E8F0" font-family="Outfit" font-weight="600" font-size="16">Amazon Clone</text>
+                </svg>
+              </figure>
+              
+              <div class="project-card-header">
+                <span class="project-category-badge">Web Development</span>
+                <span class="project-status-pill"><ion-icon name="checkmark-circle"></ion-icon> Completed</span>
+              </div>
+              
+              <h3 class="project-title">Amazon Clone</h3>
+              <p class="project-desc">Responsive e-commerce frontend inspired by Amazon with product listings, intuitive navigation, cart layouts, and modern responsive styling.</p>
+              
+              <div class="project-tech-list">
+                <span class="tech-tag">HTML</span>
+                <span class="tech-tag">CSS</span>
+                <span class="tech-tag">JavaScript</span>
+              </div>
+
+              <div class="project-card-actions">
+                <button class="project-modal-trigger-btn" data-modal-trigger="amazon-clone">
+                  <span>Qualifications</span>
+                  <ion-icon name="information-circle-outline"></ion-icon>
+                </button>
+                <div class="project-links-group">
+                  <a href="https://github.com/akhileshyadav117" target="_blank" rel="noopener noreferrer" class="project-icon-link" title="GitHub Code">
+                    <ion-icon name="logo-github"></ion-icon>
+                  </a>
+                  <a href="https://github.com/akhileshyadav117" target="_blank" rel="noopener noreferrer" class="project-icon-link" title="Live Preview">
+                    <ion-icon name="open-outline"></ion-icon>
+                  </a>
+                </div>
+              </div>
             </li>
 
-            <li class="project-item active" data-filter-item data-category="iot / hardware">
-              <a href="https://github.com/akhileshyadav117" target="_blank">
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-                  <!-- SVG IoT Water Sensor Graphics -->
-                  <svg class="project-svg-thumb" viewBox="0 0 400 250" xmlns="http://www.w3.org/2000/svg">
-                    <rect width="400" height="250" fill="#0F172A"/>
-                    <path d="M200,50 C150,110 150,160 200,180 C250,160 250,110 200,50 Z" fill="none" stroke="#00F0FF" stroke-width="3"/>
-                    <path d="M200,95 C175,125 175,155 200,170 C225,155 225,125 200,95 Z" fill="#0072FF" opacity="0.6"/>
-                    <path d="M110,90 A 20,20 0 0,1 150,90" fill="none" stroke="#38BDF8" stroke-width="2" />
-                    <path d="M250,90 A 20,20 0 0,1 290,90" fill="none" stroke="#38BDF8" stroke-width="2" />
-                    <text x="50%" y="87%" dominant-baseline="middle" text-anchor="middle" fill="#E2E8F0" font-family="Outfit" font-weight="600" font-size="16">IoT Water Sensor</text>
-                  </svg>
-                </figure>
-                <h3 class="project-title">IoT Based Water Sensor</h3>
-                <p class="project-category">IoT / Hardware</p>
-                <p class="project-desc">An automated IoT device measuring water levels and transmitting live telemetry metrics to prevent overflow.</p>
-              </a>
+            <!-- 4. Nosy Neighbor -->
+            <li class="project-item active" data-filter-item data-category="web development" data-project-id="nosy-neighbor">
+              <figure class="project-img" data-modal-trigger="nosy-neighbor">
+                <div class="project-item-icon-box">
+                  <ion-icon name="eye-outline"></ion-icon>
+                </div>
+                <svg class="project-svg-thumb" viewBox="0 0 400 250" xmlns="http://www.w3.org/2000/svg">
+                  <rect width="400" height="250" fill="#0F172A"/>
+                  <circle cx="200" cy="110" r="45" fill="none" stroke="#00F0FF" stroke-width="3"/>
+                  <circle cx="200" cy="110" r="15" fill="#0072FF" />
+                  <line x1="200" y1="25" x2="200" y2="65" stroke="#38BDF8" stroke-width="2" />
+                  <line x1="200" y1="155" x2="200" y2="195" stroke="#38BDF8" stroke-width="2" />
+                  <line x1="115" y1="110" x2="155" y2="110" stroke="#38BDF8" stroke-width="2" />
+                  <line x1="245" y1="110" x2="285" y2="110" stroke="#38BDF8" stroke-width="2" />
+                  <text x="50%" y="87%" dominant-baseline="middle" text-anchor="middle" fill="#E2E8F0" font-family="Outfit" font-weight="600" font-size="16">Nosy Neighbor</text>
+                </svg>
+              </figure>
+              
+              <div class="project-card-header">
+                <span class="project-category-badge">Web Development</span>
+                <span class="project-status-pill"><ion-icon name="checkmark-circle"></ion-icon> Completed</span>
+              </div>
+              
+              <h3 class="project-title">Nosy Neighbor</h3>
+              <p class="project-desc">A smart home security monitor designed to capture anomalies, stream video, and trigger instant safety notifications.</p>
+              
+              <div class="project-tech-list">
+                <span class="tech-tag">Python</span>
+                <span class="tech-tag">Flask</span>
+                <span class="tech-tag">OpenCV</span>
+                <span class="tech-tag">WebSockets</span>
+              </div>
+
+              <div class="project-card-actions">
+                <button class="project-modal-trigger-btn" data-modal-trigger="nosy-neighbor">
+                  <span>Qualifications</span>
+                  <ion-icon name="information-circle-outline"></ion-icon>
+                </button>
+                <div class="project-links-group">
+                  <a href="https://github.com/akhileshyadav117" target="_blank" rel="noopener noreferrer" class="project-icon-link" title="GitHub Code">
+                    <ion-icon name="logo-github"></ion-icon>
+                  </a>
+                  <a href="https://github.com/akhileshyadav117" target="_blank" rel="noopener noreferrer" class="project-icon-link" title="Live Preview">
+                    <ion-icon name="open-outline"></ion-icon>
+                  </a>
+                </div>
+              </div>
+            </li>
+
+            <!-- 5. Jarvis (Virtual Assistant) -->
+            <li class="project-item active" data-filter-item data-category="machine learning & ai" data-project-id="jarvis">
+              <figure class="project-img" data-modal-trigger="jarvis">
+                <div class="project-item-icon-box">
+                  <ion-icon name="mic-outline"></ion-icon>
+                </div>
+                <svg class="project-svg-thumb" viewBox="0 0 400 250" xmlns="http://www.w3.org/2000/svg">
+                  <rect width="400" height="250" fill="#0F172A"/>
+                  <circle cx="200" cy="110" r="50" fill="none" stroke="#0072FF" stroke-width="2"/>
+                  <circle cx="200" cy="110" r="40" fill="none" stroke="#00F0FF" stroke-width="4" stroke-dasharray="10 5"/>
+                  <circle cx="200" cy="110" r="10" fill="#00F0FF" />
+                  <path d="M150,110 L170,110 M230,110 L250,110 M200,60 L200,80 M200,140 L200,160" stroke="#38BDF8" stroke-width="2" />
+                  <text x="50%" y="87%" dominant-baseline="middle" text-anchor="middle" fill="#E2E8F0" font-family="Outfit" font-weight="600" font-size="16">Jarvis</text>
+                </svg>
+              </figure>
+              
+              <div class="project-card-header">
+                <span class="project-category-badge">Machine Learning & AI</span>
+                <span class="project-status-pill"><ion-icon name="checkmark-circle"></ion-icon> Completed</span>
+              </div>
+              
+              <h3 class="project-title">Jarvis (Virtual Assistant)</h3>
+              <p class="project-desc">A python voice assistant that automates local operations, runs web searches, and processes desktop instructions.</p>
+              
+              <div class="project-tech-list">
+                <span class="tech-tag">Python</span>
+                <span class="tech-tag">SpeechRecognition</span>
+                <span class="tech-tag">Pyttsx3</span>
+              </div>
+
+              <div class="project-card-actions">
+                <button class="project-modal-trigger-btn" data-modal-trigger="jarvis">
+                  <span>Qualifications</span>
+                  <ion-icon name="information-circle-outline"></ion-icon>
+                </button>
+                <div class="project-links-group">
+                  <a href="https://github.com/akhileshyadav117" target="_blank" rel="noopener noreferrer" class="project-icon-link" title="GitHub Code">
+                    <ion-icon name="logo-github"></ion-icon>
+                  </a>
+                  <a href="https://github.com/akhileshyadav117" target="_blank" rel="noopener noreferrer" class="project-icon-link" title="Live Preview">
+                    <ion-icon name="open-outline"></ion-icon>
+                  </a>
+                </div>
+              </div>
+            </li>
+
+            <!-- 6. AI Chatbot -->
+            <li class="project-item active" data-filter-item data-category="machine learning & ai" data-project-id="ai-chatbot">
+              <figure class="project-img" data-modal-trigger="ai-chatbot">
+                <div class="project-item-icon-box">
+                  <ion-icon name="chatbubbles-outline"></ion-icon>
+                </div>
+                <svg class="project-svg-thumb" viewBox="0 0 400 250" xmlns="http://www.w3.org/2000/svg">
+                  <rect width="400" height="250" fill="#0F172A"/>
+                  <rect x="130" y="70" width="140" height="80" rx="15" fill="none" stroke="#00F0FF" stroke-width="3" />
+                  <circle cx="170" cy="105" r="10" fill="#0072FF" />
+                  <circle cx="230" cy="105" r="10" fill="#0072FF" />
+                  <path d="M180,130 Q200,145 220,130" fill="none" stroke="#00F0FF" stroke-width="3" stroke-linecap="round"/>
+                  <line x1="200" y1="40" x2="200" y2="70" stroke="#00F0FF" stroke-width="3" />
+                  <circle cx="200" cy="35" r="7" fill="#0072FF" />
+                  <text x="50%" y="87%" dominant-baseline="middle" text-anchor="middle" fill="#E2E8F0" font-family="Outfit" font-weight="600" font-size="16">AI Chatbot</text>
+                </svg>
+              </figure>
+              
+              <div class="project-card-header">
+                <span class="project-category-badge">Machine Learning & AI</span>
+                <span class="project-status-pill"><ion-icon name="checkmark-circle"></ion-icon> Completed</span>
+              </div>
+              
+              <h3 class="project-title">AI Chatbot</h3>
+              <p class="project-desc">An intelligent conversational bot trained to comprehend complex user intentions and answer inquiries dynamically.</p>
+              
+              <div class="project-tech-list">
+                <span class="tech-tag">Python</span>
+                <span class="tech-tag">NLP</span>
+                <span class="tech-tag">Scikit-Learn</span>
+                <span class="tech-tag">Flask</span>
+              </div>
+
+              <div class="project-card-actions">
+                <button class="project-modal-trigger-btn" data-modal-trigger="ai-chatbot">
+                  <span>Qualifications</span>
+                  <ion-icon name="information-circle-outline"></ion-icon>
+                </button>
+                <div class="project-links-group">
+                  <a href="https://github.com/akhileshyadav117" target="_blank" rel="noopener noreferrer" class="project-icon-link" title="GitHub Code">
+                    <ion-icon name="logo-github"></ion-icon>
+                  </a>
+                  <a href="https://github.com/akhileshyadav117" target="_blank" rel="noopener noreferrer" class="project-icon-link" title="Live Preview">
+                    <ion-icon name="open-outline"></ion-icon>
+                  </a>
+                </div>
+              </div>
+            </li>
+
+            <!-- 7. IoT Based Water Sensor -->
+            <li class="project-item active" data-filter-item data-category="iot / hardware" data-project-id="iot-water-sensor">
+              <figure class="project-img" data-modal-trigger="iot-water-sensor">
+                <div class="project-item-icon-box">
+                  <ion-icon name="water-outline"></ion-icon>
+                </div>
+                <svg class="project-svg-thumb" viewBox="0 0 400 250" xmlns="http://www.w3.org/2000/svg">
+                  <rect width="400" height="250" fill="#0F172A"/>
+                  <path d="M200,50 C150,110 150,160 200,180 C250,160 250,110 200,50 Z" fill="none" stroke="#00F0FF" stroke-width="3"/>
+                  <path d="M200,95 C175,125 175,155 200,170 C225,155 225,125 200,95 Z" fill="#0072FF" opacity="0.6"/>
+                  <path d="M110,90 A 20,20 0 0,1 150,90" fill="none" stroke="#38BDF8" stroke-width="2" />
+                  <path d="M250,90 A 20,20 0 0,1 290,90" fill="none" stroke="#38BDF8" stroke-width="2" />
+                  <text x="50%" y="87%" dominant-baseline="middle" text-anchor="middle" fill="#E2E8F0" font-family="Outfit" font-weight="600" font-size="16">IoT Water Sensor</text>
+                </svg>
+              </figure>
+              
+              <div class="project-card-header">
+                <span class="project-category-badge">IoT / Hardware</span>
+                <span class="project-status-pill"><ion-icon name="checkmark-circle"></ion-icon> Completed</span>
+              </div>
+              
+              <h3 class="project-title">IoT Based Water Sensor</h3>
+              <p class="project-desc">An automated IoT device measuring water levels and transmitting live telemetry metrics to prevent overflow.</p>
+              
+              <div class="project-tech-list">
+                <span class="tech-tag">C / C++</span>
+                <span class="tech-tag">Arduino / ESP32</span>
+                <span class="tech-tag">Ultrasonic</span>
+                <span class="tech-tag">IoT Cloud</span>
+              </div>
+
+              <div class="project-card-actions">
+                <button class="project-modal-trigger-btn" data-modal-trigger="iot-water-sensor">
+                  <span>Qualifications</span>
+                  <ion-icon name="information-circle-outline"></ion-icon>
+                </button>
+                <div class="project-links-group">
+                  <a href="https://github.com/akhileshyadav117" target="_blank" rel="noopener noreferrer" class="project-icon-link" title="GitHub Code">
+                    <ion-icon name="logo-github"></ion-icon>
+                  </a>
+                  <a href="https://github.com/akhileshyadav117" target="_blank" rel="noopener noreferrer" class="project-icon-link" title="Live Preview">
+                    <ion-icon name="open-outline"></ion-icon>
+                  </a>
+                </div>
+              </div>
+            </li>
+
+            <!-- 8. Snake Water Gun Game -->
+            <li class="project-item active" data-filter-item data-category="python apps & games" data-project-id="snake-water-gun">
+              <figure class="project-img" data-modal-trigger="snake-water-gun">
+                <div class="project-item-icon-box">
+                  <ion-icon name="game-controller-outline"></ion-icon>
+                </div>
+                <svg class="project-svg-thumb" viewBox="0 0 400 250" xmlns="http://www.w3.org/2000/svg">
+                  <rect width="400" height="250" fill="#090D16"/>
+                  <circle cx="200" cy="110" r="45" fill="none" stroke="#00F0FF" stroke-width="2.5"/>
+                  <path d="M175,100 Q190,85 200,100 T225,100" fill="none" stroke="#10B981" stroke-width="3" stroke-linecap="round"/>
+                  <circle cx="170" cy="130" r="8" fill="#0072FF"/>
+                  <circle cx="230" cy="130" r="8" fill="#38BDF8"/>
+                  <line x1="160" y1="110" x2="240" y2="110" stroke="rgba(0, 240, 255, 0.2)" stroke-width="1.5"/>
+                  <text x="50%" y="87%" dominant-baseline="middle" text-anchor="middle" fill="#E2E8F0" font-family="Outfit" font-weight="600" font-size="16">Snake Water Gun</text>
+                </svg>
+              </figure>
+              
+              <div class="project-card-header">
+                <span class="project-category-badge">Python Apps & Games</span>
+                <span class="project-status-pill"><ion-icon name="checkmark-circle"></ion-icon> Completed</span>
+              </div>
+              
+              <h3 class="project-title">Snake Water Gun Game</h3>
+              <p class="project-desc">Interactive game implementing classic Snake-Water-Gun game logic, random computer choices, score tracking, and result calculations.</p>
+              
+              <div class="project-tech-list">
+                <span class="tech-tag">Python</span>
+                <span class="tech-tag">Game Logic</span>
+                <span class="tech-tag">CLI / GUI</span>
+              </div>
+
+              <div class="project-card-actions">
+                <button class="project-modal-trigger-btn" data-modal-trigger="snake-water-gun">
+                  <span>Qualifications</span>
+                  <ion-icon name="information-circle-outline"></ion-icon>
+                </button>
+                <div class="project-links-group">
+                  <a href="https://github.com/akhileshyadav117" target="_blank" rel="noopener noreferrer" class="project-icon-link" title="GitHub Code">
+                    <ion-icon name="logo-github"></ion-icon>
+                  </a>
+                  <a href="https://github.com/akhileshyadav117" target="_blank" rel="noopener noreferrer" class="project-icon-link" title="Live Preview">
+                    <ion-icon name="open-outline"></ion-icon>
+                  </a>
+                </div>
+              </div>
             </li>
           </ul>
         </section>
@@ -519,6 +818,68 @@
       </article>
     </div>
   </main>
+
+  <!-- PROJECT QUALIFICATIONS MODAL OVERLAY -->
+  <div class="project-modal-container" data-modal-container>
+    <div class="project-modal">
+      <button class="modal-close-btn" data-modal-close-btn title="Close modal">
+        <ion-icon name="close-outline"></ion-icon>
+      </button>
+
+      <div class="modal-header-meta">
+        <span class="project-category-badge" data-modal-category>Web Development</span>
+        <span class="project-status-pill" data-modal-status><ion-icon name="checkmark-circle"></ion-icon> Completed</span>
+      </div>
+
+      <h2 class="modal-project-title" data-modal-title>Project Title</h2>
+      <p class="modal-timeline-role" data-modal-role>Lead Developer • 2025</p>
+
+      <div class="modal-banner-box" data-modal-banner>
+        <!-- Injected dynamically -->
+      </div>
+
+      <div class="modal-section">
+        <h4 class="modal-section-heading">
+          <ion-icon name="document-text-outline"></ion-icon>
+          Project Overview & Architecture
+        </h4>
+        <p class="modal-overview-text" data-modal-overview>
+          Project description and architectural overview...
+        </p>
+      </div>
+
+      <div class="modal-section">
+        <h4 class="modal-section-heading">
+          <ion-icon name="trophy-outline"></ion-icon>
+          Key Qualifications & Highlights
+        </h4>
+        <div class="modal-qualifications-list" data-modal-qualifications>
+          <!-- Dynamic qualification bullet points -->
+        </div>
+      </div>
+
+      <div class="modal-section">
+        <h4 class="modal-section-heading">
+          <ion-icon name="code-working-outline"></ion-icon>
+          Tech Stack & Tools
+        </h4>
+        <div class="modal-tech-stack-container" data-modal-tech>
+          <!-- Tech pills -->
+        </div>
+      </div>
+
+      <div class="modal-actions-footer">
+        <a href="#" target="_blank" rel="noopener noreferrer" class="modal-btn-primary" data-modal-live>
+          <ion-icon name="open-outline"></ion-icon>
+          <span>Live Demo / Preview</span>
+        </a>
+        <a href="#" target="_blank" rel="noopener noreferrer" class="modal-btn-secondary" data-modal-github>
+          <ion-icon name="logo-github"></ion-icon>
+          <span>View Source Code</span>
+        </a>
+      </div>
+    </div>
+  </div>
 
   <!-- Ionicons modules -->
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
