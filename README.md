@@ -94,16 +94,18 @@ Go to the root directory and open `index.html` in any browser.
 
 ---
 
-## 📌 Featured Projects
+## 📌 Featured Projects & Technical Qualifications
 
-This portfolio showcases several projects including:
+This portfolio showcases comprehensive, production-ready projects with in-depth qualification details, architecture highlights, tech stack badges, and source code:
 
-- 🤖 JARVIS – Voice Controlled AI Assistant
-- 🛡️ NOISY NEIGHBOR – Smart Security Monitoring System
-- 💬 AI Chatbot
-- 💧 IoT Water Level Monitoring System
-
-More projects will be added as I continue building and learning.
+- 🎯 **InterviewForge** – AI-Powered Interview Preparation Platform *(Python, AI/LLM APIs, Web Technologies)*
+- 🤖 **Research Agent** – Autonomous AI Research Assistant & Information Retrieval *(Python, AI/LLM APIs, Web Tech)*
+- 🛒 **Amazon Clone** – Responsive E-Commerce Web Application *(HTML, CSS, JavaScript)*
+- 🛡️ **Nosy Neighbor** – Smart IoT Security & Surveillance Monitor *(Python, Flask, OpenCV, WebSockets)*
+- 🎙️ **JARVIS** – Voice-Controlled AI Desktop Assistant *(Python, SpeechRecognition, Pyttsx3, OS Automation)*
+- 💬 **AI Chatbot** – Contextual Conversational NLP Bot *(Python, NLP, Scikit-Learn, Flask)*
+- 💧 **IoT Based Water Sensor** – Automated Reservoir Telemetry Node *(C/C++, Arduino/ESP32, Ultrasonic Sensors)*
+- 🎮 **Snake Water Gun Game** – Interactive Python Game Logic Application *(Python)*
 
 ---
 
