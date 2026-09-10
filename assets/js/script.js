@@ -410,8 +410,325 @@ if (modalContainer) {
 
 // Close on Escape key press
 document.addEventListener("keydown", function (e) {
-  if (e.key === "Escape" && modalContainer && modalContainer.classList.contains("active")) {
-    closeProjectModal();
+  if (e.key === "Escape") {
+    if (modalContainer && modalContainer.classList.contains("active")) {
+      closeProjectModal();
+    }
+    if (skillModal && skillModal.classList.contains("active")) {
+      closeCmsModal(skillModal);
+    }
+    if (projectCreatorModal && projectCreatorModal.classList.contains("active")) {
+      closeCmsModal(projectCreatorModal);
+    }
+    if (cmsDashboardModal && cmsDashboardModal.classList.contains("active")) {
+      closeCmsModal(cmsDashboardModal);
+    }
   }
 });
+
+
+/**
+ * Developer CMS & Client-Side Dynamic Storage Controller
+ */
+const STORAGE_KEYS = {
+  SKILLS: "akhilesh_custom_skills",
+  PROJECTS: "akhilesh_custom_projects"
+};
+
+// Helper: Escape HTML string
+const escapeHTML = function (str) {
+  if (!str) return "";
+  return str.replace(/[&<>'"]/g, function (tag) {
+    return ({
+      '&': '&amp;',
+      '<': '&lt;',
+      '>': '&gt;',
+      "'": '&#39;',
+      '"': '&quot;'
+    }[tag] || tag);
+  });
+};
+
+// Helper: Show toast notification
+const showToast = function (msg) {
+  const toast = document.getElementById("cms-toast");
+  const toastMsg = document.getElementById("cms-toast-msg");
+  if (!toast) return;
+  if (toastMsg) toastMsg.innerText = msg;
+  toast.classList.add("show");
+  setTimeout(function () {
+    toast.classList.remove("show");
+  }, 3500);
+};
+
+// Modals management
+const skillModal = document.getElementById("modal-add-skill");
+const projectCreatorModal = document.getElementById("modal-add-project");
+const cmsDashboardModal = document.getElementById("modal-cms-dashboard");
+
+const openCmsModal = function (modalElem) {
+  if (!modalElem) return;
+  modalElem.classList.add("active");
+  document.body.style.overflow = "hidden";
+  updateCmsExportPreview();
+};
+
+const closeCmsModal = function (modalElem) {
+  if (!modalElem) return;
+  modalElem.classList.remove("active");
+  document.body.style.overflow = "";
+};
+
+// Click handlers for opening modals
+document.addEventListener("click", function (e) {
+  if (e.target.closest("[data-open-skill-modal]")) {
+    e.preventDefault();
+    closeCmsModal(cmsDashboardModal);
+    openCmsModal(skillModal);
+  } else if (e.target.closest("[data-open-project-modal]")) {
+    e.preventDefault();
+    closeCmsModal(cmsDashboardModal);
+    openCmsModal(projectCreatorModal);
+  } else if (e.target.closest("[data-open-cms-dashboard]")) {
+    e.preventDefault();
+    openCmsModal(cmsDashboardModal);
+  } else if (e.target.closest("[data-cms-close-btn]")) {
+    e.preventDefault();
+    closeCmsModal(skillModal);
+    closeCmsModal(projectCreatorModal);
+    closeCmsModal(cmsDashboardModal);
+  }
+});
+
+// Close CMS modals on overlay click
+[skillModal, projectCreatorModal, cmsDashboardModal].forEach(function (modal) {
+  if (modal) {
+    modal.addEventListener("click", function (e) {
+      if (e.target === modal) {
+        closeCmsModal(modal);
+      }
+    });
+  }
+});
+
+// Update range slider live display
+const skillPercentInput = document.getElementById("skill-percent");
+const skillValDisplay = document.getElementById("skill-val-display");
+if (skillPercentInput && skillValDisplay) {
+  skillPercentInput.addEventListener("input", function () {
+    skillValDisplay.innerText = this.value + "%";
+  });
+}
+
+// Render dynamic skill item into UI
+const renderSkillItem = function (skill) {
+  const container = document.getElementById("skills-list-container");
+  if (!container) return;
+  const li = document.createElement("li");
+  li.className = "skills-item";
+  li.innerHTML = `
+    <div class="title-wrapper">
+      <h5 class="h5">${escapeHTML(skill.name)} (${escapeHTML(skill.status || 'Completed')})</h5>
+      <data value="${skill.percent}">${skill.percent}%</data>
+    </div>
+    <div class="skill-progress-bg">
+      <div class="skill-progress-fill" style="width: ${skill.percent}%;"></div>
+    </div>
+  `;
+  container.appendChild(li);
+};
+
+// Render dynamic project card into UI
+const renderProjectItem = function (project) {
+  const list = document.querySelector(".project-list");
+  if (!list) return;
+
+  // Add to PROJECTS_DATA dictionary
+  PROJECTS_DATA[project.id] = project;
+
+  const li = document.createElement("li");
+  li.className = "project-item active";
+  li.setAttribute("data-filter-item", "");
+  li.setAttribute("data-category", (project.category || 'web development').toLowerCase().trim());
+  li.setAttribute("data-project-id", project.id);
+
+  const techBadges = (project.techStack || [])
+    .slice(0, 4)
+    .map(t => `<span class="tech-tag">${escapeHTML(t)}</span>`)
+    .join("");
+
+  li.innerHTML = `
+    <figure class="project-img" data-modal-trigger="${escapeHTML(project.id)}">
+      <div class="project-item-icon-box">
+        <ion-icon name="sparkles-outline"></ion-icon>
+      </div>
+      <svg class="project-svg-thumb" viewBox="0 0 400 250" xmlns="http://www.w3.org/2000/svg">
+        <rect width="400" height="250" fill="#090D16"/>
+        <circle cx="200" cy="110" r="46" fill="none" stroke="#00F0FF" stroke-width="2.5"/>
+        <circle cx="200" cy="110" r="28" fill="none" stroke="#0072FF" stroke-width="2" stroke-dasharray="6 3"/>
+        <circle cx="200" cy="110" r="12" fill="#00F0FF"/>
+        <text x="50%" y="87%" dominant-baseline="middle" text-anchor="middle" fill="#E2E8F0" font-family="Outfit" font-weight="600" font-size="16">${escapeHTML(project.title)}</text>
+      </svg>
+    </figure>
+    
+    <div class="project-card-header">
+      <span class="project-category-badge">${escapeHTML(project.category)}</span>
+      <span class="project-status-pill"><ion-icon name="checkmark-circle"></ion-icon> ${escapeHTML(project.status || 'Active')}</span>
+    </div>
+    
+    <h3 class="project-title">${escapeHTML(project.title)}</h3>
+    <p class="project-desc">${escapeHTML(project.desc)}</p>
+    
+    <div class="project-tech-list">
+      ${techBadges}
+    </div>
+
+    <div class="project-card-actions">
+      <button class="project-modal-trigger-btn" data-modal-trigger="${escapeHTML(project.id)}">
+        <span>Qualifications</span>
+        <ion-icon name="information-circle-outline"></ion-icon>
+      </button>
+      <div class="project-links-group">
+        <a href="${escapeHTML(project.githubUrl || 'https://github.com/akhileshyadav117')}" target="_blank" rel="noopener noreferrer" class="project-icon-link" title="GitHub Code">
+          <ion-icon name="logo-github"></ion-icon>
+        </a>
+        <a href="${escapeHTML(project.liveUrl || project.githubUrl || 'https://github.com/akhileshyadav117')}" target="_blank" rel="noopener noreferrer" class="project-icon-link" title="Live Preview">
+          <ion-icon name="open-outline"></ion-icon>
+        </a>
+      </div>
+    </div>
+  `;
+
+  list.appendChild(li);
+};
+
+// Load and render stored items on startup
+const initStoredCmsItems = function () {
+  try {
+    const savedSkills = JSON.parse(localStorage.getItem(STORAGE_KEYS.SKILLS) || "[]");
+    savedSkills.forEach(renderSkillItem);
+
+    const savedProjects = JSON.parse(localStorage.getItem(STORAGE_KEYS.PROJECTS) || "[]");
+    savedProjects.forEach(renderProjectItem);
+  } catch (err) {
+    console.error("Failed loading local portfolio items", err);
+  }
+};
+
+// Form Add Skill submission
+const formAddSkill = document.getElementById("form-add-skill");
+if (formAddSkill) {
+  formAddSkill.addEventListener("submit", function (e) {
+    e.preventDefault();
+    const name = document.getElementById("skill-name").value.trim();
+    const status = document.getElementById("skill-status").value.trim() || "Completed";
+    const percent = parseInt(document.getElementById("skill-percent").value, 10) || 90;
+
+    if (!name) return;
+
+    const newSkill = { name: name, status: status, percent: percent };
+    const savedSkills = JSON.parse(localStorage.getItem(STORAGE_KEYS.SKILLS) || "[]");
+    savedSkills.push(newSkill);
+    localStorage.setItem(STORAGE_KEYS.SKILLS, JSON.stringify(savedSkills));
+
+    renderSkillItem(newSkill);
+    formAddSkill.reset();
+    if (skillValDisplay) skillValDisplay.innerText = "90%";
+    closeCmsModal(skillModal);
+    showToast(`Skill "${name}" added live to portfolio!`);
+  });
+}
+
+// Form Add Project submission
+const formAddProject = document.getElementById("form-add-project");
+if (formAddProject) {
+  formAddProject.addEventListener("submit", function (e) {
+    e.preventDefault();
+    const title = document.getElementById("proj-title").value.trim();
+    const category = document.getElementById("proj-category").value;
+    const role = document.getElementById("proj-role").value.trim() || "Lead Developer • 2025";
+    const desc = document.getElementById("proj-desc").value.trim();
+    const overview = document.getElementById("proj-overview").value.trim() || desc;
+    const qualRaw = document.getElementById("proj-qualifications").value.trim();
+    const techRaw = document.getElementById("proj-tech").value.trim();
+    const githubUrl = document.getElementById("proj-github").value.trim() || "https://github.com/akhileshyadav117";
+    const liveUrl = document.getElementById("proj-live").value.trim() || githubUrl;
+
+    if (!title || !desc) return;
+
+    const id = "custom-" + title.toLowerCase().replace(/[^a-z0-9]+/g, "-") + "-" + Date.now();
+    const qualifications = qualRaw
+      ? qualRaw.split("\n").map(q => q.trim()).filter(q => q.length > 0)
+      : [desc];
+    const techStack = techRaw
+      ? techRaw.split(",").map(t => t.trim()).filter(t => t.length > 0)
+      : ["JavaScript", "Web Tech"];
+
+    const newProject = {
+      id: id,
+      title: title,
+      category: category,
+      status: "Active",
+      role: role,
+      desc: desc,
+      overview: overview,
+      qualifications: qualifications,
+      techStack: techStack,
+      githubUrl: githubUrl,
+      liveUrl: liveUrl
+    };
+
+    const savedProjects = JSON.parse(localStorage.getItem(STORAGE_KEYS.PROJECTS) || "[]");
+    savedProjects.push(newProject);
+    localStorage.setItem(STORAGE_KEYS.PROJECTS, JSON.stringify(savedProjects));
+
+    renderProjectItem(newProject);
+    formAddProject.reset();
+    closeCmsModal(projectCreatorModal);
+    showToast(`Project "${title}" added live with full qualifications!`);
+  });
+}
+
+// Update CMS Export JSON preview
+const updateCmsExportPreview = function () {
+  const preview = document.getElementById("cms-export-preview");
+  if (!preview) return;
+  const skills = JSON.parse(localStorage.getItem(STORAGE_KEYS.SKILLS) || "[]");
+  const projects = JSON.parse(localStorage.getItem(STORAGE_KEYS.PROJECTS) || "[]");
+
+  const exportData = {
+    customSkills: skills,
+    customProjects: projects
+  };
+
+  preview.innerText = JSON.stringify(exportData, null, 2);
+};
+
+// Copy CMS export JSON button
+const btnCopyCmsData = document.getElementById("btn-copy-cms-data");
+if (btnCopyCmsData) {
+  btnCopyCmsData.addEventListener("click", function () {
+    const preview = document.getElementById("cms-export-preview");
+    if (!preview) return;
+    navigator.clipboard.writeText(preview.innerText).then(function () {
+      showToast("CMS Data copied to clipboard!");
+    });
+  });
+}
+
+// Clear custom items
+const btnClearCmsData = document.getElementById("btn-clear-cms-data");
+if (btnClearCmsData) {
+  btnClearCmsData.addEventListener("click", function () {
+    if (confirm("Reset all locally created skills and projects?")) {
+      localStorage.removeItem(STORAGE_KEYS.SKILLS);
+      localStorage.removeItem(STORAGE_KEYS.PROJECTS);
+      location.reload();
+    }
+  });
+}
+
+// Initialize on DOM load
+initStoredCmsItems();
+
 
