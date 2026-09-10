@@ -120,6 +120,13 @@
             <a href="mailto:yadavakhilesh.org@gmail.com" class="social-link"><ion-icon name="mail-outline"></ion-icon></a>
           </li>
         </ul>
+
+        <div class="sidebar-cms-trigger">
+          <button class="cms-portal-btn" data-open-cms-dashboard title="Developer CMS Dashboard">
+            <ion-icon name="construct-outline"></ion-icon>
+            <span>Developer CMS</span>
+          </button>
+        </div>
       </div>
     </aside>
 
@@ -270,14 +277,20 @@
 
         <!-- Skills Progress Bar -->
         <section class="skill">
-          <div class="title-wrapper">
-            <div class="icon-box">
-              <ion-icon name="school-outline"></ion-icon>
+          <div class="skills-header-wrapper">
+            <div class="title-wrapper">
+              <div class="icon-box">
+                <ion-icon name="school-outline"></ion-icon>
+              </div>
+              <h3 class="h3">My Skills</h3>
             </div>
-            <h3 class="h3">My Skills</h3>
+            <button class="add-cms-btn" data-open-skill-modal title="Add New Skill">
+              <ion-icon name="add-circle-outline"></ion-icon>
+              <span>Add Skill</span>
+            </button>
           </div>
 
-          <ul class="skills-list content-card">
+          <ul class="skills-list content-card" id="skills-list-container">
             <li class="skills-item">
               <div class="title-wrapper">
                 <h5 class="h5">Python Programming (Completed)</h5>
@@ -333,8 +346,12 @@
 
       <!-- PROJECTS SECTION -->
       <article class="portfolio" data-page="projects">
-        <header>
+        <header class="projects-header-wrapper">
           <h2 class="h2 article-title">Projects</h2>
+          <button class="add-cms-btn" data-open-project-modal title="Add New Project">
+            <ion-icon name="add-circle-outline"></ion-icon>
+            <span>Add Project</span>
+          </button>
         </header>
 
         <section class="projects-list-section">
@@ -879,6 +896,195 @@
         </a>
       </div>
     </div>
+  </div>
+
+  <!-- ADD SKILL CREATOR MODAL -->
+  <div class="project-modal-container" id="modal-add-skill" data-cms-modal="skill">
+    <div class="project-modal" style="max-width: 500px;">
+      <button class="modal-close-btn" data-cms-close-btn title="Close modal">
+        <ion-icon name="close-outline"></ion-icon>
+      </button>
+
+      <div class="modal-header-meta">
+        <span class="project-category-badge"><ion-icon name="school-outline"></ion-icon> Skill Manager</span>
+      </div>
+
+      <h2 class="modal-project-title">Add New Skill</h2>
+      <p class="modal-timeline-role">Add a technical skill with a proficiency progress bar</p>
+
+      <form class="cms-form" id="form-add-skill">
+        <div class="form-group">
+          <label class="form-label" for="skill-name">Skill Name *</label>
+          <input type="text" id="skill-name" class="form-input" placeholder="e.g. React.js, Docker, SQL, TensorFlow" required />
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="skill-status">Status / Level</label>
+          <input type="text" id="skill-status" class="form-input" placeholder="e.g. Completed, Advanced, In Progress" value="Completed" />
+        </div>
+
+        <div class="form-group">
+          <div class="form-label">
+            <span>Proficiency Level (%)</span>
+            <span class="range-val-badge" id="skill-val-display">90%</span>
+          </div>
+          <div class="form-range-container">
+            <input type="range" id="skill-percent" class="form-range" min="10" max="100" value="90" step="5" />
+          </div>
+        </div>
+
+        <div class="modal-actions-footer" style="margin-top: 15px;">
+          <button type="submit" class="modal-btn-primary" style="flex: 1; justify-content: center;">
+            <ion-icon name="add-circle-outline"></ion-icon>
+            <span>Save Skill Live</span>
+          </button>
+          <button type="button" class="modal-btn-secondary" data-cms-close-btn>Cancel</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- ADD PROJECT CREATOR MODAL -->
+  <div class="project-modal-container" id="modal-add-project" data-cms-modal="project">
+    <div class="project-modal">
+      <button class="modal-close-btn" data-cms-close-btn title="Close modal">
+        <ion-icon name="close-outline"></ion-icon>
+      </button>
+
+      <div class="modal-header-meta">
+        <span class="project-category-badge"><ion-icon name="folder-outline"></ion-icon> Project Manager</span>
+      </div>
+
+      <h2 class="modal-project-title">Add New Project</h2>
+      <p class="modal-timeline-role">Add a complete project with qualifications, tech tags & links</p>
+
+      <form class="cms-form" id="form-add-project">
+        <div class="form-group">
+          <label class="form-label" for="proj-title">Project Title *</label>
+          <input type="text" id="proj-title" class="form-input" placeholder="e.g. Autonomous Drone Navigation" required />
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="proj-category">Category *</label>
+          <select id="proj-category" class="form-select" required>
+            <option value="Machine Learning & AI">Machine Learning & AI</option>
+            <option value="Web Development">Web Development</option>
+            <option value="IoT / Hardware">IoT / Hardware</option>
+            <option value="Python Apps & Games">Python Apps & Games</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="proj-role">Status & Role</label>
+          <input type="text" id="proj-role" class="form-input" placeholder="e.g. Lead Developer • 2025" value="Lead Developer • 2025" />
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="proj-desc">Short Description (Card summary) *</label>
+          <textarea id="proj-desc" class="form-textarea" placeholder="Brief 1-2 sentence overview shown on the card..." required></textarea>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="proj-overview">Detailed Technical Overview (Modal breakdown)</label>
+          <textarea id="proj-overview" class="form-textarea" placeholder="In-depth problem, architecture, and objectives..."></textarea>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="proj-qualifications">
+            <span>Key Qualifications & Highlights</span>
+            <span class="form-help-text">(One point per line)</span>
+          </label>
+          <textarea id="proj-qualifications" class="form-textarea" placeholder="Implemented real-time sensor processing with &lt;50ms latency&#10;Trained deep learning model achieving 96% accuracy&#10;Integrated REST API for seamless cloud sync"></textarea>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="proj-tech">
+            <span>Tech Stack</span>
+            <span class="form-help-text">(Comma separated)</span>
+          </label>
+          <input type="text" id="proj-tech" class="form-input" placeholder="e.g. Python, PyTorch, ROS, OpenCV, Flask" required />
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="proj-github">GitHub URL</label>
+          <input type="url" id="proj-github" class="form-input" placeholder="https://github.com/akhileshyadav117/..." value="https://github.com/akhileshyadav117" />
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="proj-live">Live Demo / Preview URL</label>
+          <input type="url" id="proj-live" class="form-input" placeholder="https://..." value="https://github.com/akhileshyadav117" />
+        </div>
+
+        <div class="modal-actions-footer" style="margin-top: 15px;">
+          <button type="submit" class="modal-btn-primary" style="flex: 1; justify-content: center;">
+            <ion-icon name="add-circle-outline"></ion-icon>
+            <span>Save Project Live</span>
+          </button>
+          <button type="button" class="modal-btn-secondary" data-cms-close-btn>Cancel</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- DEVELOPER CMS PORTAL MODAL -->
+  <div class="project-modal-container" id="modal-cms-dashboard" data-cms-modal="dashboard">
+    <div class="project-modal" style="max-width: 600px;">
+      <button class="modal-close-btn" data-cms-close-btn title="Close modal">
+        <ion-icon name="close-outline"></ion-icon>
+      </button>
+
+      <div class="modal-header-meta">
+        <span class="project-category-badge"><ion-icon name="construct-outline"></ion-icon> Developer CMS</span>
+        <span class="project-status-pill"><ion-icon name="shield-checkmark"></ion-icon> Client Storage Ready</span>
+      </div>
+
+      <h2 class="modal-project-title">Portfolio CMS & Data Sync</h2>
+      <p class="modal-timeline-role">Manage dynamic content, view local items, and export data for GitHub</p>
+
+      <div class="modal-section">
+        <h4 class="modal-section-heading">
+          <ion-icon name="flash-outline"></ion-icon>
+          Quick Actions
+        </h4>
+        <div style="display: flex; gap: 10px; flex-wrap: wrap; margin-top: 8px;">
+          <button class="modal-btn-primary" data-open-skill-modal style="flex: 1; justify-content: center;">
+            <ion-icon name="add-circle-outline"></ion-icon>
+            <span>Add Skill</span>
+          </button>
+          <button class="modal-btn-primary" data-open-project-modal style="flex: 1; justify-content: center;">
+            <ion-icon name="add-circle-outline"></ion-icon>
+            <span>Add Project</span>
+          </button>
+        </div>
+      </div>
+
+      <div class="modal-section">
+        <h4 class="modal-section-heading">
+          <ion-icon name="code-download-outline"></ion-icon>
+          Export Stored Items for GitHub
+        </h4>
+        <p class="modal-overview-text">
+          Items you add are immediately active in your browser. To permanently sync custom additions with your GitHub & Netlify repo, click <strong>Copy JSON Export</strong>:
+        </p>
+        <div class="cms-code-box" id="cms-export-preview">// Stored custom items will appear here</div>
+        <div style="display: flex; gap: 10px; margin-top: 10px; flex-wrap: wrap;">
+          <button type="button" class="modal-btn-secondary" id="btn-copy-cms-data" style="flex: 1; justify-content: center;">
+            <ion-icon name="copy-outline"></ion-icon>
+            <span>Copy JSON Export</span>
+          </button>
+          <button type="button" class="modal-btn-secondary" id="btn-clear-cms-data" style="color: #EF4444; border-color: rgba(239, 68, 68, 0.4);">
+            <ion-icon name="trash-outline"></ion-icon>
+            <span>Reset Local Additions</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SUCCESS TOAST NOTIFICATION -->
+  <div class="cms-toast" id="cms-toast">
+    <ion-icon name="checkmark-circle"></ion-icon>
+    <span id="cms-toast-msg">Item added successfully!</span>
   </div>
 
   <!-- Ionicons modules -->
