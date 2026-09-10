@@ -6,7 +6,7 @@
 
 A modern, high-performance, and responsive developer portfolio built to showcase technical skills, authentic engineering projects, education, and career journey as a **Computer Science (Artificial Intelligence & Machine Learning)** undergraduate.
 
-Designed with modern glassmorphic aesthetics, fluid micro-interactions, responsive flexbox layouts, and client-side data persistence for dynamic updates.
+Designed with modern glassmorphic aesthetics, fluid micro-interactions, responsive flexbox layouts, and client-side data persistence for dynamic project management.
 
 ---
 
@@ -18,7 +18,7 @@ Designed with modern glassmorphic aesthetics, fluid micro-interactions, responsi
 
 ### ⚡ 1. Dynamic Developer CMS & Local Persistence
 - **In-App Skill & Qualification Creator:** Allows instant addition of new coursework, academic degrees, and technical skill categories directly through an intuitive modal UI.
-- **In-App Project Creator:** Easily add new software projects, github repositories, live demo links, and descriptions without modifying raw HTML.
+- **In-App Project Creator:** Easily add new software projects, github repositories, live demo links, and descriptions without modifying raw code.
 - **Client-Side `localStorage` Engine:** Dynamically stores newly added skills and projects with persistent browser synchronization and auto-render capabilities.
 
 ### 🔍 2. Interactive Project Qualification Modals
@@ -51,18 +51,17 @@ Designed with modern glassmorphic aesthetics, fluid micro-interactions, responsi
 
 ---
 
-## 📌 Featured Projects
+## 🚀 Interactive Project Showcase
 
-| Project | Domain | Tech Stack | Highlights |
-| :--- | :--- | :--- | :--- |
-| 🎯 **InterviewForge** | AI / LLM Web Platform | Python, AI/LLM APIs, Web Tech | AI-driven personalized interview question generation and simulated technical interview practice. |
-| 🤖 **Research Agent** | Autonomous AI Agent | Python, AI/LLM APIs, Web Tech | Multi-step information retrieval agent synthesizing deep research across academic and technical sources. |
-| 🛒 **Amazon Clone** | E-Commerce Web App | HTML5, CSS3, JavaScript | High-fidelity e-commerce storefront with cart interactions and responsive product layouts. |
-| 🛡️ **Nosy Neighbor** | IoT Surveillance System | Python, Flask, OpenCV, WebSockets | Automated computer vision security node with real-time motion detection and telemetry feeds. |
-| 🎙️ **JARVIS** | Desktop AI Voice Assistant | Python, SpeechRecognition, Pyttsx3 | Voice-commanded desktop automation suite executing OS actions and contextual speech processing. |
-| 💬 **AI Chatbot** | Conversational NLP Bot | Python, NLP, Scikit-Learn, Flask | Intent classification and rule-guided NLP conversational engine for instant automated assistance. |
-| 💧 **IoT Water Sensor** | Hardware / Embedded IoT | C/C++, Arduino/ESP32, Ultrasonic | Real-time liquid level detection, automated threshold alerts, and hardware telemetry. |
-| 🎮 **Snake Water Gun Game** | Game Logic Application | Python | Classic decision-matrix game implementation showcasing modular Python game loops and state handling. |
+The portfolio features an actively updated, multi-disciplinary showcase across key engineering domains:
+
+- 🤖 **AI & Autonomous Agents:** LLM integrations, conversational NLP chatbots, and AI-driven interview intelligence platforms.
+- 🌐 **Full-Stack Web Applications:** High-fidelity e-commerce storefronts, responsive web apps, and modern frontend utilities.
+- ⚡ **IoT & Hardware Telemetry:** Microcontroller firmware (ESP32/Arduino), sensor telemetry pipelines, and computer vision surveillance nodes.
+- 🐍 **Python Software & Automation:** Desktop voice assistants, automation scripts, and decision-logic applications.
+
+👉 **Explore all live demos, project qualifications, and source code repositories at:**  
+🔗 **[https://akhileshyadavportfolio.netlify.app](https://akhileshyadavportfolio.netlify.app)**
 
 ---
 
