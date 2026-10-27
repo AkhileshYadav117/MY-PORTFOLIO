@@ -105,7 +105,7 @@ Then navigate to `http://localhost:8000` in your web browser.
 ## 🤝 Connect With Me
 
 - **Portfolio:** [https://akhileshyadavportfolio.netlify.app](https://akhileshyadavportfolio.netlify.app)
-- **GitHub:** [https://github.com/akhileshyadav117](https://github.com/akhileshyadav117)
+- **GitHub:** [https://github.com/akhileshyadav117](https://github.com/AkhileshYadav117)
 - **Open to:** Software Engineering Internships, Full Stack Development, and AI/ML Collaborations.
 
 ---
